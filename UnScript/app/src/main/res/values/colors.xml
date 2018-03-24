@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black">#000000</color>
+
+    <color name="backcolor">#244D61</color>
+    <color name="textcolor">#FFFFFF</color>
+    <color name="pothole">#85A49F</color>
+    <color name="garbage">#6F9294</color>
+    <color name="complaints">#5B8086</color>
+    <color name="coming1">#486F76</color>
+    <color name="coming2">#3C616A</color>
+    <color name="coming3">#2D515D</color>
+
+</resources>

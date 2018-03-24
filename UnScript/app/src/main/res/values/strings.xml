@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">UnScript</string>
+
+    <!-- Watson -->
+    <string name="username">d6bbfb36-1202-4163-acb1-82373902152e</string>
+    <string name="password">jmfYhMvVKz6s</string>
+    <string name="workspace">9b706b33-4ceb-45d0-a018-42feae5061ce</string>
+
+    <string name="urlAttendance">http://40.90.191.188:8016/attendence</string>
+    <string name="urlprofile">http://40.90.191.188:8014/profile</string>
+    <string name="urllogin">http://40.90.191.188:8012/login</string>
+
+</resources>

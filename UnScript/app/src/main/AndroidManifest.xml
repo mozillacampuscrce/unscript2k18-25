@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ht.unscript">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DashBoard"
+            android:label="DashBoard" />
+        <activity
+            android:name=".Attendance"
+            android:label="Attendance"
+            android:parentActivityName=".DashBoard" />
+        <activity
+            android:name=".Watson"
+            android:label="Bot"
+            android:parentActivityName=".DashBoard" />
+        <activity
+            android:name=".Profile"
+            android:label="Profile"
+            android:parentActivityName=".DashBoard" />
+        <activity
+            android:name=".ChatFac"
+            android:label="Chat"
+            android:parentActivityName=".DashBoard" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="15af7fd04740bd65ce6500f25512a8f017e7c9e7" />
+
+        <service android:name=".FireIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".FireMsgService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".FireBaseDataReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ALL_APPS" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+        <activity android:name=".ResponseNoti">
+            <intent-filter>
+                <action android:name="android.intent.action.ALL_APPS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        -->
+
+        <activity android:name=".ChatXmpp"
+            android:label="Chat"
+            android:parentActivityName=".ChatFac"/>
+    </application>
+
+</manifest>
