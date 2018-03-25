@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ht.unscript.Results">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unit Test 1 Result"
+        android:id="@+id/ut1"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unit Test 2 Result"
+        android:id="@+id/ut2"/>
+
+    <Button
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unit Test 3 Result"
+        android:id="@+id/ut3"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Semister Result"
+        android:id="@+id/finalrs"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="------------------------------------------"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/downloadPdf"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/download_Pdf" />
+
+    <!--  Download Doc Layout  -->
+    <Button
+        android:id="@+id/downloadDoc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/download_Doc" />
+
+    <!--  Download Zip File Layout  -->
+    <Button
+        android:id="@+id/downloadZip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/download_zip" />
+
+    <!--  Download Video File Layout  -->
+    <Button
+        android:id="@+id/downloadVideo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/download_video" />
+
+</LinearLayout>

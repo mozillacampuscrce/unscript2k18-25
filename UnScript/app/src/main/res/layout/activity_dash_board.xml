@@ -32,7 +32,7 @@
                     android:layout_marginTop="25dp"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/dashboardcam"/>
+                    android:src="@drawable/profile"/>
 
                 <TextView
                     android:layout_marginTop="25dp"
@@ -59,7 +59,7 @@
                     android:layout_marginTop="25dp"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/dashboardcam2"/>
+                    android:src="@drawable/chat"/>
 
                 <TextView
                     android:layout_gravity="center"
@@ -99,7 +99,7 @@
                     android:layout_marginTop="25dp"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/dashboardcomplaints"/>
+                    android:src="@drawable/att"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -164,7 +164,7 @@
                     android:layout_marginTop="25dp"
                     android:layout_width="100dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/dashboardnews"/>
+                    android:src="@drawable/result"/>
 
                 <TextView
                     android:layout_marginTop="25dp"

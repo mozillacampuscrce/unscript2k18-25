@@ -9,5 +9,17 @@
     <string name="urlAttendance">http://40.90.191.188:8016/attendence</string>
     <string name="urlprofile">http://40.90.191.188:8014/profile</string>
     <string name="urllogin">http://40.90.191.188:8012/login</string>
+    <string name="urltranslate">http://40.90.191.188:8010/translateApp</string>
+
+    <string name="download_Pdf">Download TimeTable</string>
+    <string name="download_Doc">Download Previous Paper</string>
+    <string name="download_zip">Download Syllabus</string>
+    <string name="download_video">Download Marksheet</string>
+    <string name="download_mp3">Download MP3</string>
+    <string name="openFolder">Open Downloaded Folder</string>
+    <string name="downloadStarted">Download Started…</string>
+    <string name="downloadCompleted">Download Completed…</string>
+    <string name="downloadFailed">Download Failed…</string>
+    <string name="downloadAgain">Download Again</string>
 
 </resources>

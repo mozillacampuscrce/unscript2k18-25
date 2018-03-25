@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.crashlytics.android.Crashlytics;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -60,7 +61,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         sharedpreferences = getSharedPreferences(pref, Context.MODE_PRIVATE);
         tokenFirebase = sharedpreferences.getString("tokenFirebase", null);
-        Log.d("----", tokenFirebase);
 
         client = new OkHttpClient.Builder()
                 .connectTimeout(15, TimeUnit.SECONDS)
@@ -73,6 +73,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             // not signed in. Show the "sign in" button and explanation.
             // ...
+            tokenFirebase = FirebaseInstanceId.getInstance().getToken();
+            Log.d("----", tokenFirebase);
             startActivity(new Intent(getApplicationContext(), DashBoard.class));
             finish();
         }
@@ -86,6 +88,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.login:
                 //startActivity(new Intent(this, DashBoard.class));
+                tokenFirebase = FirebaseInstanceId.getInstance().getToken();
+                Log.d("----", tokenFirebase);
                 checkLogin();
                 break;
         }
@@ -103,11 +107,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             protected String doInBackground(Void... params) {
 
+                tokenFirebase = FirebaseInstanceId.getInstance().getToken();
+
                 postdata = new JSONObject();
                 try {
                     postdata.put("rollNo", rollNo);
                     postdata.put("password", password);
-                    postdata.put("tokenFirebase", tokenFirebase);
+                    postdata.put("tokenId", tokenFirebase);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -160,6 +166,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 resJabber = resultData.getString("email");
                 final String[] jaber = resJabber.split("\\@");
                 resJabber = jaber[0];
+
+                Toast.makeText(this, "valid Credentials", Toast.LENGTH_SHORT).show();
 
                 SharedPreferences.Editor editor = sharedpreferences.edit();
                 editor.putString("rollNo", rollNo);

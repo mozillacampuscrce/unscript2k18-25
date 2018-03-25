@@ -74,6 +74,8 @@ public class Attendance extends AppCompatActivity {
         sharedpreferences = getSharedPreferences(pref, Context.MODE_PRIVATE);
         rollNo = sharedpreferences.getString("rollNo", null);
 
+        Log.d("----", rollNo);
+
         client = new OkHttpClient.Builder()
                 .connectTimeout(15, TimeUnit.SECONDS)
                 .writeTimeout(15, TimeUnit.SECONDS)
@@ -90,6 +92,8 @@ public class Attendance extends AppCompatActivity {
 
         if (rollNo == null)
             rollNo = "101";
+
+        rollNo = "103";
 
         Log.d("----", url);
         new AsyncTask<Void, Void, String>() {
@@ -170,15 +174,16 @@ public class Attendance extends AppCompatActivity {
             lT = String.valueOf(lectTotal);
             gT = String.valueOf(grandTotal);
             oAP = String.valueOf(overAllPrec);
-            oAP = oAP.substring(0, 6);
+            Log.d("----", oAP);
+            //oAP = oAP.substring(0, 6);
             s1P = String.valueOf(sub1Prec);
             s2P = String.valueOf(sub2Prec);
             s3P = String.valueOf(sub3Prec);
             s4P = String.valueOf(sub4Prec);
-            s1P = s1P.substring(0, 6);
-            s2P = s2P.substring(0, 6);
-            s3P = s3P.substring(0, 6);
-            s4P = s4P.substring(0, 6);
+            s1P = s1P.substring(0, 4);
+            s2P = s2P.substring(0, 4);
+            s3P = s3P.substring(0, 4);
+            s4P = s4P.substring(0, 4);
 
             sub1lec.setText(snmr);
             sub2lec.setText(cc);

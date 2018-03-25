@@ -55,10 +55,10 @@ public class DashBoard extends AppCompatActivity implements View.OnClickListener
                 startActivity(new Intent(this, Attendance.class));
                 break;
             case R.id.registercomplaint:
-                Log.d("----", "reg");
+                startActivity(new Intent(this, Complaint.class));
                 break;
             case R.id.results:
-                Log.d("----", "ressss");
+                startActivity(new Intent(this, Results.class));
                 break;
             case R.id.watsoncard:
                 startActivity(new Intent(this, Watson.class));

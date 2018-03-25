@@ -73,7 +73,7 @@ public class ChatXmpp extends AppCompatActivity {
         jabberId = sharedpreferences.getString("jabberId", null);
         AJabberId = sharedpreferences.getString("AJabberId", null);
 
-        jabberId = "hardikthakor.ht";
+        //jabberId = "hardikthakor.ht";
 
         icon1 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_person_black_24dp);
         icon2 = BitmapFactory.decodeResource(getResources(), R.drawable.ic_person_black_24dp);

@@ -53,6 +53,7 @@ dependencies {
     implementation 'com.daasuu:BubbleLayout:1.2.0'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.ibm.watson.developer_cloud:java-sdk:3.7.2'
+    implementation 'com.microsoft.azure.android:azure-storage-android:0.8.0@aar'
     implementation 'org.igniterealtime.smack:smack-tcp:4.1.0'
     implementation 'org.igniterealtime.smack:smack-android-extensions:4.1.0'
     implementation 'org.igniterealtime.smack:smack-android:4.1.0'
